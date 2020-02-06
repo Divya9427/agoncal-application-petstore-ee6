@@ -1,4 +1,4 @@
-# Application - Petstore Java EE 6
+# Application - Petstore Java EE 6 hi
 
 * *Author* : [Antonio Goncalves](http://www.antoniogoncalves.org)
 * *Level* : Intermediate
