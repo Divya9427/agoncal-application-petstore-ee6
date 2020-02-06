@@ -422,8 +422,8 @@
       </repository>
       <snapshotRepository>
     <id>nexus</id>
-   <name>samplesnapshot</name>
-   <url>http://34.66.64.75:8081/repository/samplesnapshot/</url>
+   <name>samplerepo</name>
+   <url>http://34.66.64.75:8081/repository/samplerepo/</url>
   </snapshotRepository>
  </distributionManagement>
 </project>
