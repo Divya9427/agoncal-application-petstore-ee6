@@ -6,7 +6,7 @@
     <groupId>org.agoncal.application</groupId>
     <artifactId>petstoreee6</artifactId>
     <packaging>war</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <name>Petstore application using Java EE 6</name>
 
     <properties>
@@ -417,13 +417,13 @@
          <distributionManagement>
   <repository>
    <id>nexus</id>
-   <name>samplesnapshot</name>
-   <url>http://34.66.64.75:8081/repository/samplesnapshot/</url>
+   <name>release</name>
+   <url>http://34.66.64.75:8081/repository/release/</url>
       </repository>
       <snapshotRepository>
     <id>nexus</id>
-   <name>samplesnapshot</name>
-   <url>http://34.66.64.75:8081/repository/samplesnapshot/</url>
+   <name>release</name>
+   <url>http://34.66.64.75:8081/repository/release/</url>
   </snapshotRepository>
  </distributionManagement>
 </project>
