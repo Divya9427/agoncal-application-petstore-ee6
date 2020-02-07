@@ -32,7 +32,7 @@ pipeline {
 
         stage("Quality Gate"){
              steps {
-         timeout(time: 5, unit: 'MINUTES') {
+         timeout(time: 10, unit: 'MINUTES') {
             waitForQualityGate abortPipeline: true
         }
       }  
@@ -100,10 +100,7 @@ pipeline {
       //-DmaximumMethodCoverage: '70',
       //-DrunAlways: true
                changeBuildStatus: true,
-    minimumInstructionCoverage: '20',
-    maximumInstructionCoverage: '80',
-               minimumMethodCoverage: '10',
-               maximumMethodCoverage: '80'
+    minimumInstructionCoverage: '20', maximumInstructionCoverage: '80', minimumMethodCoverage: '10', maximumMethodCoverage: '80'
            )
         }
    } 
