@@ -438,16 +438,18 @@
             <url>http://repo1.maven.org/maven2/</url>
         </pluginRepository>
     </pluginRepositories>
-       <distributionManagement>
+
+         <distributionManagement>
   <repository>
    <id>nexus</id>
-   <name>samplesnapshot</name>
-   <url>http://34.66.64.75:8081/repository/samplesnapshot/</url>
+   <name>release</name>
+   <url>http://34.66.64.75:8081/repository/release/</url>
       </repository>
       <snapshotRepository>
     <id>nexus</id>
-   <name>samplesnapshot</name>
-   <url>http://34.66.64.75:8081/repository/samplesnapshot/</url>
+   <name>release</name>
+   <url>http://34.66.64.75:8081/repository/release/</url>
+
   </snapshotRepository>
  </distributionManagement>
 </project>

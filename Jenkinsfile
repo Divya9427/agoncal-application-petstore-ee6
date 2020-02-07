@@ -6,7 +6,11 @@ pipeline {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "34.66.64.75:8081"
-        NEXUS_REPOSITORY = "samplesnapshot"
+
+
+        
+        NEXUS_REPOSITORY = "release"
+
         NEXUS_CREDENTIAL_ID = "nexus-credentials"
     }
 
@@ -15,28 +19,15 @@ pipeline {
 
             steps {
                 withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn clean compile'
+                    sh 'mvn clean package'
                 }
             }
         }
         
-           stage('SonarQube analysis') {
-      steps {
-           withMaven(maven : 'maven_3_5_0') {
-        withSonarQubeEnv('sonar') {
-          sh 'mvn clean package sonar:sonar'
-        }
-      }
-    }
-           }
 
-        stage("Quality Gate"){
-             steps {
-         timeout(time: 10, unit: 'MINUTES') {
-            waitForQualityGate abortPipeline: true
-        }
-      }  
-        }
+   
+
+    
         stage ('Testing Stage') {
 
             steps {
