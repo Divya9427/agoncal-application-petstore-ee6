@@ -5,8 +5,8 @@ pipeline {
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "34.66.64.75:8081"
-        NEXUS_REPOSITORY = "release"
+        NEXUS_URL = "34.66.64.75:8081"      
+        NEXUS_REPOSITORY = "samplesnapshot"
         NEXUS_CREDENTIAL_ID = "nexus-credentials"
     }
 
@@ -20,7 +20,10 @@ pipeline {
             }
         }
         
-           
+
+   
+
+    
         stage ('Testing Stage') {
 
             steps {
@@ -66,4 +69,27 @@ pipeline {
         }
 
     }
+    post {
+       always {
+            //archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+           //junit 'target/surefire-reports/*.xml'
+           //junit '*.xml'
+           jacoco(
+               execPattern: 'target/*.exec',
+      classPattern: 'target/classes',
+      sourcePattern: 'src/main/java',
+      //exclusionPattern: 'src/test*'
+      //-DmaximumBranchCoverage: '70',
+      //-DmaximumClassCoverage: '70',
+      //-DmaximumComplexityCoverage: '70',
+      //-DmaximumInstructionCoverage: '100',
+      //-DmaximumLineCoverage: '70',
+      //-DmaximumMethodCoverage: '70',
+      //-DrunAlways: true
+               //changeBuildStatus: true,
+    //minimumInstructionCoverage: '0', maximumInstructionCoverage: '100', minimumMethodCoverage: '0', maximumMethodCoverage: '100'
+           )
+        }
+   } 
+    
 }
