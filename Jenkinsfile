@@ -92,13 +92,13 @@ pipeline {
       classPattern: 'target/classes',
       sourcePattern: 'src/main/java',
       exclusionPattern: 'src/test*'
-      maximumBranchCoverage: '70',
-      maximumClassCoverage: '70',
-      maximumComplexityCoverage: '70',
-      maximumInstructionCoverage: '100',
-      maximumLineCoverage: '70',
-      maximumMethodCoverage: '70',
-      runAlways: true
+      -DmaximumBranchCoverage: '70',
+      -DmaximumClassCoverage: '70',
+      -DmaximumComplexityCoverage: '70',
+      -DmaximumInstructionCoverage: '100',
+      -DmaximumLineCoverage: '70',
+      -DmaximumMethodCoverage: '70',
+      -DrunAlways: true
            )
         }
    } 
