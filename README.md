@@ -1,5 +1,10 @@
+
 # Application - Petstore Java EE 6
 #final test
+
+# Application - Petstore Java EE 6 hi
+
+
 * *Author* : [Antonio Goncalves](http://www.antoniogoncalves.org)
 * *Level* : Intermediate
 * *Technologies* : Java EE 6 (JPA 2.0, CDI 1.0, Bean Validation 1.0, EJB Lite 3.1, JSF 2.0, JAX-RS 1.1)
