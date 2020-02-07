@@ -2,7 +2,7 @@
 # Application - Petstore Java EE 6
 #final test to test pr hi bii
 
-# Application - Petstore Java EE 6 hi
+# Application - Petstore Java EE 6 hi hi
 
 
 * *Author* : [Antonio Goncalves](http://www.antoniogoncalves.org)
