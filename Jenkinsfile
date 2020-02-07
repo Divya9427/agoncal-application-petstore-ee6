@@ -101,7 +101,7 @@ pipeline {
       //-DrunAlways: true
                changeBuildStatus: true,
     minimumInstructionCoverage: '70',
-    maximumInstructionCoverage: '80
+    maximumInstructionCoverage: '80'
            )
         }
    } 
