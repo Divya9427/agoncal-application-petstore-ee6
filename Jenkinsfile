@@ -74,7 +74,7 @@ pipeline {
             //archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
            //junit 'target/surefire-reports/*.xml'
             //archive "target/**/*"
-            junit '/var/lib/jenkins/workspace/**/target/surefire-reports/*.xml'
+            junit '/var/lib/jenkins/workspace/pipeline_multibranch_divya/target/surefire-reports/*.xml'
            //junit '*.xml'
            jacoco(
                execPattern: 'target/*.exec',
