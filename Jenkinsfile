@@ -85,7 +85,7 @@ pipeline {
     post {
        always {
             //archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
-            junit 'build/reports/**/*.xml'
+            //junit 'build/reports/**/*.xml'
            jacoco(
                execPattern: 'target/*.exec',
       classPattern: 'target/classes',
