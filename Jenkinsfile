@@ -104,7 +104,7 @@ pipeline {
    //} 
     post {
         always {
-          junit "**/build/test-results/*.xml"
+          //junit "**/build/test-results/*.xml"
           step([
               $class         : 'FindBugsPublisher',
               pattern        : 'build/reports/findbugs/*.xml',
