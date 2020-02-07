@@ -442,13 +442,13 @@
          <distributionManagement>
   <repository>
    <id>nexus</id>
-   <name>release</name>
-   <url>http://34.66.64.75:8081/repository/release/</url>
+   <name>samplesnapshot</name>
+   <url>http://34.66.64.75:8081/repository/samplesnapshot/</url>
       </repository>
       <snapshotRepository>
     <id>nexus</id>
-   <name>release</name>
-   <url>http://34.66.64.75:8081/repository/release/</url>
+   <name>samplesnapshot</name>
+   <url>http://34.66.64.75:8081/repository/samplesnapshot/</url>
 
   </snapshotRepository>
  </distributionManagement>
