@@ -86,12 +86,19 @@ pipeline {
        always {
             //archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
            //junit 'target/surefire-reports/*.xml'
-           junit '*.xml'
+           //junit '*.xml'
            jacoco(
                execPattern: 'target/*.exec',
       classPattern: 'target/classes',
       sourcePattern: 'src/main/java',
       exclusionPattern: 'src/test*'
+      maximumBranchCoverage: '70',
+      maximumClassCoverage: '70',
+      maximumComplexityCoverage: '70',
+      maximumInstructionCoverage: '100',
+      maximumLineCoverage: '70',
+      maximumMethodCoverage: '70',
+      runAlways: true
            )
         }
    } 
