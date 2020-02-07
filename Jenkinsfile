@@ -99,8 +99,8 @@ pipeline {
       //-DmaximumLineCoverage: '70',
       //-DmaximumMethodCoverage: '70',
       //-DrunAlways: true
-               changeBuildStatus: true,
-    minimumInstructionCoverage: '0', maximumInstructionCoverage: '100', minimumMethodCoverage: '0', maximumMethodCoverage: '100'
+               //changeBuildStatus: true,
+    //minimumInstructionCoverage: '0', maximumInstructionCoverage: '100', minimumMethodCoverage: '0', maximumMethodCoverage: '100'
            )
         }
    } 
