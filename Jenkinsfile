@@ -5,12 +5,8 @@ pipeline {
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "34.66.64.75:8081"
-
-
-        
-        NEXUS_REPOSITORY = "release"
-
+        NEXUS_URL = "34.66.64.75:8081"     
+        NEXUS_REPOSITORY = "samplesnapshot"
         NEXUS_CREDENTIAL_ID = "nexus-credentials"
     }
 
