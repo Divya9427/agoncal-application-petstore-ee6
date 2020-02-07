@@ -82,15 +82,15 @@ pipeline {
         }
 
     }
-    //post {
-       //always {
+    post {
+       always {
             //archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
            //junit 'target/surefire-reports/*.xml'
            //junit '*.xml'
-          // jacoco(
-         //      execPattern: 'target/*.exec',
-      //classPattern: 'target/classes',
-      //sourcePattern: 'src/main/java',
+           jacoco(
+               execPattern: 'target/*.exec',
+      classPattern: 'target/classes',
+      sourcePattern: 'src/main/java',
       //exclusionPattern: 'src/test*'
       //-DmaximumBranchCoverage: '70',
       //-DmaximumClassCoverage: '70',
@@ -100,38 +100,7 @@ pipeline {
       //-DmaximumMethodCoverage: '70',
       //-DrunAlways: true
      //      )
-    //    }
-   //} 
-    post {
-        always {
-          //junit "**/build/test-results/*.xml"
-          step([
-              $class         : 'FindBugsPublisher',
-              pattern        : 'build/reports/findbugs/*.xml',
-              canRunOnFailed : true
-          ])
-          step([
-              $class         : 'PmdPublisher',
-              pattern        : 'build/reports/pmd/*.xml',
-              canRunOnFailed : true
-          ])
-          step([
-              $class           : 'JacocoPublisher',
-              execPattern      : 'build/jacoco/jacoco.exec',
-              classPattern     : 'build/classes/main',
-              sourcePattern    : 'src/main/java',
-              exclusionPattern : '**/*Test.class'
-          ])
-          publishHTML([
-              allowMissing          : false,
-              alwaysLinkToLastBuild : false,
-              keepAll               : true,
-              reportDir             : 'build/asciidoc/html5',
-              reportFiles           : 'index.html',
-              reportTitles          : "API Documentation",
-              reportName            : "API Documentation"
-          ])
-         
         }
-      }
+   } 
+    
 }
