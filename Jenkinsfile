@@ -7,7 +7,7 @@ pipeline {
 	        NEXUS_PROTOCOL = "http"
 	        NEXUS_URL = "34.69.119.221:8081"     
 	        NEXUS_REPOSITORY = "Jwalarepositoy"
-	        NEXUS_CREDENTIAL_ID = "nexus-credentials"
+	        NEXUS_CREDENTIAL_ID = "nexuscredentials"
 	    }
 	
 	    stages {
