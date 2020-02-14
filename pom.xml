@@ -6,7 +6,7 @@
     <groupId>org.agoncal.application</groupId>
     <artifactId>petstoreee6</artifactId>
     <packaging>war</packaging>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <name>Petstore application using Java EE 6</name>
 
     <properties>
@@ -272,6 +272,30 @@
         </profile>
 
     </profiles>
+          <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>${version.maven.surefire.plugin}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${version.maven.surefire.plugin}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <outputDirectory>${basedir}/target/site/surefire-report.html</outputDirectory>
+                </configuration>
+                </plugin>
+        </plugins>
+    </reporting>
 
     <build>
         <finalName>applicationPetstore</finalName>
@@ -414,7 +438,6 @@
             <url>http://repo1.maven.org/maven2/</url>
         </pluginRepository>
     </pluginRepositories>
-    
          	<distributionManagement>
 	  <repository>
 	   <id>nexus</id>
